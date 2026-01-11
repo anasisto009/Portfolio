@@ -70,7 +70,6 @@ function App() {
             </motion.div>
           </motion.div>
         ) : (
-          console.log("Rendering main content"),
           <motion.div
             key="content"
             initial={{ opacity: 0 }}
