@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@theme {
+  --color-background: #030014;
+  --color-primary: #6366f1;
+  --color-secondary: #a855f7;
+  --color-accent: #f43f5e;
+
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  --animate-pulse-slow: pulse 8s ease-in-out infinite;
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+
+    50% {
+      transform: scale(1.1);
+      opacity: 0.6;
+    }
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-[#030014] text-slate-400 antialiased;
+  margin: 0;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Design Tokens */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6366f1] to-[#a855f7];
+}
+
+.glass {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/10;
+}
+
+.grid-background {
+  background-image:
+    linear-gradient(to right, #4f4f4f10 1px, transparent 1px),
+    linear-gradient(to bottom, #4f4f4f10 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.blob {
+  @apply absolute rounded-full blur-[128px] opacity-40 mix-blend-multiply transition-all duration-1000;
+}
+
+.typing-cursor::after {
+  content: '|';
+  @apply animate-pulse text-[#6366f1] ml-1;
+}
