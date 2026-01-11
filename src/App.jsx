@@ -14,7 +14,11 @@ function App() {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    const splashTimer = setTimeout(() => setShowSplash(false), 2000);
+    console.log("App mounted, showSplash:", showSplash);
+    const splashTimer = setTimeout(() => {
+      console.log("Splash timer finished, setting showSplash to false");
+      setShowSplash(false);
+    }, 2000);
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -66,6 +70,7 @@ function App() {
             </motion.div>
           </motion.div>
         ) : (
+          console.log("Rendering main content"),
           <motion.div
             key="content"
             initial={{ opacity: 0 }}
