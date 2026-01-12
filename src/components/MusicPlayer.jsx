@@ -5,7 +5,7 @@ import { Play, Pause, SkipForward } from 'lucide-react';
 const SONGS = [
     {
         name: "Beauty & Beat",
-        src: "/src/assets/ytmp3free.cc_justin-bieber-beauty-and-a-beat-slowed-reverb-youtubemp3free.org.mp3",
+        src: "/audio/beauty-and-beat.mp3",
         start: 8,
         end: 160
     }
