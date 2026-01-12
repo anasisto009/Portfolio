@@ -14,9 +14,7 @@ function App() {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    console.log("App mounted, showSplash:", showSplash);
     const splashTimer = setTimeout(() => {
-      console.log("Splash timer finished, setting showSplash to false");
       setShowSplash(false);
     }, 2000);
     const handleScroll = () => setScrolled(window.scrollY > 50);
