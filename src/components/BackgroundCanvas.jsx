@@ -54,22 +54,38 @@ const Particles = ({ count = 5000 }) => {
 };
 
 export const BackgroundCanvas = () => {
+    const [hasWebGL, setHasWebGL] = React.useState(true);
+
+    React.useEffect(() => {
+        try {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl') || canvas.getContext('webgl2');
+            if (!gl) setHasWebGL(false);
+        } catch {
+            setHasWebGL(false);
+        }
+    }, []);
+
     return (
         <div className="fixed inset-0 -z-10 bg-[#030014] overflow-hidden">
             {/* Minimal Grid */}
             <div className="absolute inset-0 grid-background opacity-10 pointer-events-none z-10" />
 
-            <Canvas
-                camera={{ position: [0, 0, 20], fov: 75 }}
-                dpr={1}
-                gl={{
-                    antialias: false,
-                    powerPreference: "high-performance",
-                    alpha: true
-                }}
-            >
-                <Particles count={1000} />
-            </Canvas>
+            {hasWebGL ? (
+                <Canvas
+                    camera={{ position: [0, 0, 20], fov: 75 }}
+                    dpr={1}
+                    gl={{
+                        antialias: false,
+                        powerPreference: "high-performance",
+                        alpha: true
+                    }}
+                >
+                    <Particles count={1000} />
+                </Canvas>
+            ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 to-purple-900/20" />
+            )}
 
             {/* Final atmosphere overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent pointer-events-none z-20" />
