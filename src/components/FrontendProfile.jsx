@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Layout, Palette, Zap, Monitor, Smartphone, Code, MousePointer2, Box, Instagram, Globe, Code2 } from 'lucide-react';
+import { Layout, Palette, Zap, Monitor, Smartphone, Code, MousePointer2, Box, Instagram, Globe, Code2, Wand2 } from 'lucide-react';
 import { GlassCard, SectionTitle, TextGradient } from './UI';
 import zakariaPhoto from '../assets/zakaria.jpg';
 
@@ -166,6 +166,33 @@ export const FrontendProfile = () => {
                                 className="inline-block text-secondary hover:text-secondary/80 font-semibold text-sm mt-2 transition-colors"
                             >
                                 Play Game → 
+                            </a>
+                        </div>
+                    </GlassCard>
+
+                    <GlassCard className="group relative overflow-hidden p-0 border-secondary/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="p-8 space-y-4">
+                            <div className="flex justify-between items-start">
+                                <Wand2 className="text-secondary w-10 h-10" />
+                                <span className="text-xs font-mono text-slate-500">2025 // Interactive</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white">3D Particle Gesture Interface</h3>
+                            <p className="text-slate-400 leading-relaxed">
+                                Real-time 3D particle system controlled via hand gestures using Gemini 3 hand detection. Responds to open/close hand states with smooth, responsive animations.
+                            </p>
+                            <div className="flex gap-2">
+                                {['React', 'Three.js', 'Gemini 3', 'Framer Motion', 'WebGL'].map(tag => (
+                                    <span key={tag} className="text-[10px] px-2 py-1 glass rounded-md text-slate-300">{tag}</span>
+                                ))}
+                            </div>
+                            <a
+                                href="https://your-gesture-interface-url.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block text-secondary hover:text-secondary/80 font-semibold text-sm mt-2 transition-colors"
+                            >
+                                Explore → 
                             </a>
                         </div>
                     </GlassCard>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Database, Server, Code2, Globe, Cpu, Layers, ShieldCheck, Zap, Instagram } from 'lucide-react';
+import { Database, Server, Code2, Globe, Cpu, Layers, ShieldCheck, Zap, Instagram, Linkedin, Github } from 'lucide-react';
 import { GlassCard, SectionTitle, TextGradient } from './UI';
 import anasPhoto from '../assets/anas.jpg';
 
@@ -62,7 +62,7 @@ export const BackendProfile = () => {
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="flex justify-center"
+                        className="flex justify-center gap-4"
                     >
                         <a
                             href="https://www.instagram.com/_anasnus___/"
@@ -71,6 +71,22 @@ export const BackendProfile = () => {
                             className="p-3 glass rounded-full text-white hover:text-primary hover:shadow-[0_0_20px_-5px_#6366f1] transition-all duration-300"
                         >
                             <Instagram className="w-6 h-6" />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/anas-elmardi-02a37b338"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 glass rounded-full text-white hover:text-primary hover:shadow-[0_0_20px_-5px_#6366f1] transition-all duration-300"
+                        >
+                            <Linkedin className="w-6 h-6" />
+                        </a>
+                        <a
+                            href="https://github.com/anasisto009"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 glass rounded-full text-white hover:text-primary hover:shadow-[0_0_20px_-5px_#6366f1] transition-all duration-300"
+                        >
+                            <Github className="w-6 h-6" />
                         </a>
                     </motion.div>
                 </div>

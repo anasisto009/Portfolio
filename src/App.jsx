@@ -4,7 +4,7 @@ import { BackgroundCanvas } from './components/BackgroundCanvas';
 import { BackendProfile } from './components/BackendProfile';
 import { FrontendProfile } from './components/FrontendProfile';
 import Typewriter from './components/Typewriter';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { MusicPlayer } from './components/MusicPlayer';
 import { Magnetic } from './components/UI';
 
@@ -130,11 +130,12 @@ function App() {
 
             <footer className="py-20 border-t border-white/5 text-center space-y-10">
               <div className="flex justify-center space-x-8">
-                {[Github, Linkedin, Mail].map((Icon, i) => (
-                  <a key={i} href="#" className="text-slate-500 hover:text-white transition-colors">
-                    <Icon className="w-5 h-5" />
-                  </a>
-                ))}
+                <a href="https://github.com/anasisto009" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors">
+                  <Github className="w-5 h-5" />
+                </a>
+                <a href="https://www.linkedin.com/in/anas-elmardi-02a37b338" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
               </div>
               <div className="space-y-4">
                 <p className="text-slate-500 text-[10px] font-bold tracking-[0.3em] uppercase">
