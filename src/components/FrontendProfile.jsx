@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Layout, Palette, Zap, Monitor, Smartphone, Code, MousePointer2, Box, Instagram, Globe } from 'lucide-react';
+import { Layout, Palette, Zap, Monitor, Smartphone, Code, MousePointer2, Box, Instagram, Globe, Code2 } from 'lucide-react';
 import { GlassCard, SectionTitle, TextGradient } from './UI';
 import zakariaPhoto from '../assets/zakaria.jpg';
 
@@ -65,7 +65,7 @@ export const FrontendProfile = () => {
                         className="flex justify-center"
                     >
                         <a
-                            href="https://www.instagram.com/bboy_z16/"
+                            href="https://www.instagram.com/zakaria_z16/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-3 glass rounded-full text-white hover:text-secondary hover:shadow-[0_0_20px_-5px_#a855f7] transition-all duration-300"
@@ -105,25 +105,6 @@ export const FrontendProfile = () => {
             <section>
                 <SectionTitle>Select Projects</SectionTitle>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <GlassCard parallax={true} className="group relative overflow-hidden p-0">
-                        <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="p-8 space-y-4">
-                            <div className="flex justify-between items-start">
-                                <Zap className="text-secondary w-10 h-10" />
-                                <span className="text-xs font-mono text-slate-500">2025 // Production</span>
-                            </div>
-                            <h3 className="text-2xl font-bold text-white">3D Generative Canvas</h3>
-                            <p className="text-slate-400 leading-relaxed">
-                                Interactive 3D environments optimized for both desktop and mobile with 60fps performance using Three.js.
-                            </p>
-                            <div className="flex gap-2">
-                                {['Three.js', 'React', 'GSAP', 'WebGL'].map(tag => (
-                                    <span key={tag} className="text-[10px] px-2 py-1 glass rounded-md text-slate-300">{tag}</span>
-                                ))}
-                            </div>
-                        </div>
-                    </GlassCard>
-
                     <GlassCard className="group relative overflow-hidden p-0 border-accent/5">
                         <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="p-8 space-y-4">
@@ -140,6 +121,52 @@ export const FrontendProfile = () => {
                                     <span key={tag} className="text-[10px] px-2 py-1 glass rounded-md text-slate-300">{tag}</span>
                                 ))}
                             </div>
+                        </div>
+                    </GlassCard>
+
+                    <GlassCard className="group relative overflow-hidden p-0">
+                        <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="p-8 space-y-4">
+                            <div className="flex justify-between items-start">
+                                <Zap className="text-secondary w-10 h-10" />
+                                <span className="text-xs font-mono text-slate-500">2024 // Game</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white">Jeux 4 en Ligne (Connect 4)</h3>
+                            <p className="text-slate-400 leading-relaxed">
+                                A strategic Connect Four game implementation with AI opponent, game logic, and interactive UI for turn-based gameplay.
+                            </p>
+                            <div className="flex gap-2">
+                                {['Python', 'Game Logic', 'AI', 'OOP'].map(tag => (
+                                    <span key={tag} className="text-[10px] px-2 py-1 glass rounded-md text-slate-300">{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </GlassCard>
+
+                    <GlassCard className="group relative overflow-hidden p-0">
+                        <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="p-8 space-y-4">
+                            <div className="flex justify-between items-start">
+                                <Code2 className="text-secondary w-10 h-10" />
+                                <span className="text-xs font-mono text-slate-500">2025 // Game</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white">Chess Engine</h3>
+                            <p className="text-slate-400 leading-relaxed">
+                                A high-performance chess game engine built in C++ with minimax algorithm, move validation, and interactive gameplay for competitive chess analysis.
+                            </p>
+                            <div className="flex gap-2">
+                                {['C++', 'Game Logic', 'Algorithms', 'AI'].map(tag => (
+                                    <span key={tag} className="text-[10px] px-2 py-1 glass rounded-md text-slate-300">{tag}</span>
+                                ))}
+                            </div>
+                            <a
+                                href="https://your-chess-game-url.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block text-secondary hover:text-secondary/80 font-semibold text-sm mt-2 transition-colors"
+                            >
+                                Play Game → 
+                            </a>
                         </div>
                     </GlassCard>
                 </div>

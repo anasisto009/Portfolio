@@ -105,7 +105,50 @@ export const BackendProfile = () => {
             <section>
                 <SectionTitle>Select Projects</SectionTitle>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <GlassCard parallax={true} className="group relative overflow-hidden p-0">
+                    <a href="https://padel-finder-web.vercel.app" target="_blank" rel="noopener noreferrer" className="no-underline">
+                        <GlassCard parallax={true} className="group relative overflow-hidden p-0 cursor-pointer">
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="p-8 space-y-4">
+                                <div className="flex justify-between items-start">
+                                    <Globe className="text-primary w-10 h-10" />
+                                    <span className="text-xs font-mono text-slate-500">2025 // Live</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-white">Padel-Finder</h3>
+                                <p className="text-slate-400 leading-relaxed">
+                                    A full-stack platform for discovering and booking padel courts. Features real-time availability, user authentication, and booking management system.
+                                </p>
+                                <div className="flex gap-2">
+                                    {['Node.js', 'MongoDB', 'React', 'Express'].map(tag => (
+                                        <span key={tag} className="text-[10px] px-2 py-1 glass rounded-md text-slate-300">{tag}</span>
+                                    ))}
+                                </div>
+                                <span className="inline-block text-primary hover:text-primary/80 font-semibold text-sm mt-2 transition-colors">
+                                    View Live → 
+                                </span>
+                            </div>
+                        </GlassCard>
+                    </a>
+
+                    <GlassCard className="group relative overflow-hidden p-0 border-secondary/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="p-8 space-y-4">
+                            <div className="flex justify-between items-start">
+                                <Zap className="text-secondary w-10 h-10" />
+                                <span className="text-xs font-mono text-slate-500">2024 // Game</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white">Jeux 4 en Ligne (Connect 4)</h3>
+                            <p className="text-slate-400 leading-relaxed">
+                                A strategic Connect Four game implementation in Python with AI opponent, game logic, and interactive UI for turn-based gameplay.
+                            </p>
+                            <div className="flex gap-2">
+                                {['Python', 'Game Logic', 'AI', 'OOP'].map(tag => (
+                                    <span key={tag} className="text-[10px] px-2 py-1 glass rounded-md text-slate-300">{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </GlassCard>
+
+                    <GlassCard className="group relative overflow-hidden p-0">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="p-8 space-y-4">
                             <div className="flex justify-between items-start">
@@ -142,8 +185,61 @@ export const BackendProfile = () => {
                             </div>
                         </div>
                     </GlassCard>
+
+                    <GlassCard className="group relative overflow-hidden p-0">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="p-8 space-y-4">
+                            <div className="flex justify-between items-start">
+                                <Code2 className="text-primary w-10 h-10" />
+                                <span className="text-xs font-mono text-slate-500">2025 // Game</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white">Chess Engine</h3>
+                            <p className="text-slate-400 leading-relaxed">
+                                A high-performance chess game engine built in C++ with minimax algorithm, move validation, and interactive gameplay for competitive chess analysis.
+                            </p>
+                            <div className="flex gap-2">
+                                {['C++', 'Game Logic', 'Algorithms', 'AI'].map(tag => (
+                                    <span key={tag} className="text-[10px] px-2 py-1 glass rounded-md text-slate-300">{tag}</span>
+                                ))}
+                            </div>
+                            <a
+                                href="https://your-chess-game-url.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block text-primary hover:text-primary/80 font-semibold text-sm mt-2 transition-colors"
+                            >
+                                Play Game → 
+                            </a>
+                        </div>
+                    </GlassCard>
+                </div>
+            </section>
+
+            <section>
+                <SectionTitle> Learning</SectionTitle>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <GlassCard className="p-8 space-y-4 border-primary/10 hover:border-primary/30">
+                        <div className="flex items-start gap-4">
+                            <ShieldCheck className="text-primary w-8 h-8 flex-shrink-0 mt-1" />
+                            <div className="space-y-2">
+                                <h3 className="text-lg font-bold text-white">Google Cloud Cybersecurity</h3>
+                                <p className="text-sm text-slate-400">Professional certification covering cloud security architecture, identity management, and threat detection.</p>
+                            </div>
+                        </div>
+                    </GlassCard>
+
+                    <GlassCard className="p-8 space-y-4 border-secondary/10 hover:border-secondary/30">
+                        <div className="flex items-start gap-4">
+                            <Layers className="text-secondary w-8 h-8 flex-shrink-0 mt-1" />
+                            <div className="space-y-2">
+                                <h3 className="text-lg font-bold text-white">Google Cloud Data Analytics</h3>
+                                <p className="text-sm text-slate-400">Advanced training in BigQuery, data pipelines, and analytics solutions on Google Cloud Platform.</p>
+                            </div>
+                        </div>
+                    </GlassCard>
                 </div>
             </section>
         </motion.div>
     );
 };
+
